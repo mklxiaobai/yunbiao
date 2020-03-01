@@ -25,8 +25,6 @@ public class ObjectUtil {
             //设置可以获取私人属性
             field.setAccessible(true);
             try {
-                Class type = field.getType();// 得到此属性的类型
-                if(type == String.class){
                     //属性名
                     String valueName =field.getName();
 
@@ -53,11 +51,9 @@ public class ObjectUtil {
                     }
                     //属性值
 //                    Object value=  field.get(o);
-                    /**
-                     * 设置更新后属性的值，此处如不设置则值不会发生改变
-                     */
+
 //                     field.set(o,value);
-                }
+
             } catch (IllegalAccessException | ParseException e) {
                 e.printStackTrace();
             }
